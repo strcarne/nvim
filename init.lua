@@ -36,7 +36,6 @@ vim.schedule(function()
   require "mappings"
 end)
 
-
 vim.api.nvim_create_autocmd("BufDelete", {
   callback = function()
     local bufs = vim.t.bufs
@@ -45,3 +44,11 @@ vim.api.nvim_create_autocmd("BufDelete", {
     end
   end,
 })
+
+vim.opt.relativenumber = true
+vim.opt.number = true
+vim.opt.spell = false
+vim.opt.signcolumn = "auto"
+vim.opt.wrap = false
+vim.opt.shiftwidth = 4
+vim.opt.tabstop = 4
